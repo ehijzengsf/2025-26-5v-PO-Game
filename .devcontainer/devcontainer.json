@@ -1,0 +1,26 @@
+{
+    "name": "iPO Game",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "features": {
+        "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    },
+    "postCreateCommand": "pip3 install pygame",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.debugpy"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python3"
+            }
+        }
+    },
+    "portsAttributes": {
+        "6080": {
+            "label": "Game Scherm",
+            "onAutoForward": "openBrowser"
+        }
+    },
+    "remoteUser": "codespace"
+}
